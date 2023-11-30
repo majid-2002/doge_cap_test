@@ -80,13 +80,11 @@ const NFTMinter = () => {
                 })
                 .then((data) => {
                   mintAddress = data.mintAddress.toBase58();
-                  console.log(data);
                   return data;
                 });
 
               resolve(nftMinted);
 
-              console.log("MintedAddress : ", mintAddress);
 
               try {
                 await uploadNFT(wallet.publicKey.toBase58());
